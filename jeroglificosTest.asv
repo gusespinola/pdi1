@@ -1,0 +1,8 @@
+clear all
+clc
+img1 = im2bw(imread('akeht.png'));     %Ankh:      A
+img2 = im2bw(imread('ankh.png');      %Akhet:     K
+img3 = im2bw(imread('djed.png');      %Djed:      D
+img4 = im2bw(imread('scarab.png');    %Scarab:    S
+img5 = im2bw(imread('was.png');       %Was:       W
+img6 = imread('wedjat.png');    %Wedjat:    J

@@ -1,0 +1,15 @@
+function caracteristicas = extraercaracteristicas(bw_image)
+    %Funcion que extrae caracteristicas de Hu de una imagen.
+    
+    
+    contours = bwboundaries(bw_image);
+    hu_moments = [];
+    
+    for i = 1:length(contours)
+        contour = contours{i};
+        hu_moments_i = invmoments(contour);
+        hu_moments = [hu_moments; hu_moments_i];
+    end
+    
+    caracteristicas = hu_moments;
+end

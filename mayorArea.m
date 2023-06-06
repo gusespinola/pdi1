@@ -1,0 +1,35 @@
+function g = mayorArea(f, n)
+% Sintaxis:
+% g = mayorArea(f, n)
+% 
+% Descripcion:
+% Función que selecciona los n objetos de mayor área de una imagen binaria
+% f y devuelve una nueva imagen g con los objetos seleccionados.
+
+% Obtener componentes de la imagen
+[L, n_obj] = bwlabel(f);
+
+if n > n_obj
+   error('n supera la cantidad máxima de componentes');
+end 
+
+% Obtener las propiedades de los objetos en la imagen binaria f
+stats = regionprops(L, 'Area', 'PixelIdxList');
+
+% Ordenar los objetos según su área, de mayor a menor
+[B, I] = sort([stats.Area], 'descend');
+
+% Seleccionar los n objetos de mayor área
+idx = I(1:n);
+
+% Crear una imagen binaria vacía del mismo tamaño que la imagen f
+g = zeros(size(f));
+
+% Seleccionar los objetos en la imagen g
+for i = 1:length(idx)
+    g(stats(idx(i)).PixelIdxList) = 1;
+end
+
+imshow(~g)
+
+end
