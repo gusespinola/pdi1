@@ -1,15 +1,20 @@
-TEMA 1:
+## TEMA 1
 Ejecutar el script "medianaTest.m"
-TEMA 2:
+
+## TEMA 2
 Ejecutar el script "reconstruccionTest.m"
-TEMA 3:
+
+## TEMA 3:
 Ejecutar el script "mayorAreaTest.m"
-TEMA 4:
+
+## TEMA 4:
 Ejecutar el script "hitmiss.m"
-TEMA 5:
+
+## TEMA 5:
 Leer los scripts 
 "jeroglificos.m"
 "segmentar_objetos.m"
 "extraercaracteristicas.m"
-TEMA 6:
+
+## TEMA 6:
 Ejecutar el script "pruebaPoligono_v2.m"
